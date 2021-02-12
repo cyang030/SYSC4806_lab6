@@ -24,6 +24,7 @@ public class AddressBook {
     }
 
     public static AddressBook loadViaSerialization(String filename) throws IOException, ClassNotFoundException {
+        AddressBook addressBook;
         ObjectInputStream objectInputStream = new ObjectInputStream(
                 new BufferedInputStream(new FileInputStream(filename)));
 
