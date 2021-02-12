@@ -46,7 +46,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.4.2</version>
+                <configuration>
+                    <mainClass>sysc4806lab.AccessingDataRestApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
