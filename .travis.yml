@@ -3,4 +3,5 @@ jdk:
   - oraclejdk13
 deploy:
   provider: heroku
-  api_key: $HEROKU_API_KEY
+  api_key:
+    secure: $HEROKU_API_KEY
