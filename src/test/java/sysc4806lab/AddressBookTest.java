@@ -1,13 +1,8 @@
 package sysc4806lab;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.xml.sax.SAXException;
-
-import javax.persistence.*;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
-import java.util.List;
+import sysc4806lab.model.AddressBook;
+import sysc4806lab.model.BuddyInfo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

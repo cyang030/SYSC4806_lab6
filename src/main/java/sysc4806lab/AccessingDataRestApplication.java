@@ -14,7 +14,9 @@ public class AccessingDataRestApplication {
     }
 
     public static Repositories getRepositories() {
-        Repositories repositories = new Repositories(applicationContext);;
+        Repositories repositories = new Repositories(applicationContext);
+
+
         return repositories;
     }
 }

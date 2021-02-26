@@ -1,4 +1,4 @@
-package sysc4806lab;
+package sysc4806lab.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -112,7 +112,7 @@ public class BuddyInfo implements Serializable {
 
     public String toString()
     {
-        return this.name + "#" + this.address + "#" + this.getPhone_number();
+        return "ID:#"+ this.id + this.name + "#" + this.address + "#" + this.getPhone_number();
     }
 
     public String toXML() {

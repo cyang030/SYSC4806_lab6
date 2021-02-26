@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>SYSC4806 LAB6 Part 1</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h2 th:text="'This is an address book' + ${addressBookId}"/>
+    <h3>Current content:</h3>
+    <p th:text="${content}"/>
+    <form action="#" th:action="@{/addBuddy}" th:object="${buddyinfo}" method="post">
+<!--        feedback address book id ...-->
+        <input type="hidden" name="addressBookId" th:value="${addressBookId}"/>
+        <p>Name: <td><input type="text" th:field="*{name}" /></td></p>
+        <p>Address: <input type="text" th:field="*{phone_number}" /></p>
+        <p>Phone: <input type="text" th:field="*{address}" /></p>
+        <p><input type="submit" value="Add Buddy" /> </p>
+    </form>
+
+    <form action="#" th:action="@{/delBuddy}" method="post">
+        <input type="hidden" name="addressBookId" th:value="${addressBookId}"/>
+        <p>Buddy id: <td><input type="number" name="buddyid" /></td></p>
+        <p><input type="submit" value="Delete Buddy" /> </p>
+    </form>
+</body>
+</html>

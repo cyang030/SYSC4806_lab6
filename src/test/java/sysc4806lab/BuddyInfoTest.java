@@ -2,6 +2,7 @@ package sysc4806lab;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import sysc4806lab.model.BuddyInfo;
 
 import javax.persistence.*;
 

@@ -38,7 +38,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>sysc4806lab.AddressBook</mainClass>
+                            <mainClass>sysc4806lab.model.AddressBook</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

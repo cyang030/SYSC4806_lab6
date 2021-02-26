@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import sysc4806lab.ShowAddressBookController;
+import sysc4806lab.ctrl.ShowAddressBookController;
 
 @SpringBootTest
 public class SmokeTest {
