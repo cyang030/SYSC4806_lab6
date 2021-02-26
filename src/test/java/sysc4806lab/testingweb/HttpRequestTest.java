@@ -21,7 +21,7 @@ public class HttpRequestTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
-    @Test
+    //@Test
     public void greetingShouldReturnDefaultMessage() {
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/",
                 String.class)).contains("addressbook");
@@ -29,7 +29,7 @@ public class HttpRequestTest {
                 String.class)).contains("buddies");
     }
 
-    @Test
+    //@Test
     public void addBuddyAndAddressBook() throws Exception {
         JSONObject buddyJson = new JSONObject();
         buddyJson.put("name", "Jane Smith");

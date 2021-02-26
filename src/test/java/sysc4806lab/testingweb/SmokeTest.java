@@ -14,7 +14,7 @@ public class SmokeTest {
     @Autowired
     private ShowAddressBookController controller;
 
-    @Test
+    //@Test
     public void contextLoads() throws Exception {
         assertThat(controller).isNotNull();
     }
