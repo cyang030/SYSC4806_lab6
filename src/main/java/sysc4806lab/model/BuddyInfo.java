@@ -22,12 +22,11 @@ public class BuddyInfo implements Serializable {
     private String phone_number;
     private int age;
 
-    @ManyToOne
-    @JoinColumn(name = "addressBook_id")
-    private AddressBook addressbook;
+    //@ManyToOne
+    //@JoinColumn(name = "addressBook_id")
+    //private AddressBook addressbook;
 
     public BuddyInfo() {
-
     }
 
     public BuddyInfo(String name, String address, String phone_number) {
@@ -82,19 +81,6 @@ public class BuddyInfo implements Serializable {
         this.phone_number = phone_number;
     }
 
-//	public static void main(String[] args) {
-//		// only used for testing
-//		Double x = Math.random();
-//		BuddyInfo buddy = new BuddyInfo(String.valueOf(x), "Bar", "123456");
-//		System.out.println("Hello " + buddy.getName());
-//	}
-
-/*    workaround the bug where the entity now being recognized
-    public String toString()
-    {
-        return "id#" + this.id + " " + this.name + "#" + this.address + "#" + this.getPhone_number();
-    }*/
-
     public String greetings()
     {
         return "Greetings, " + this.name;
@@ -112,12 +98,8 @@ public class BuddyInfo implements Serializable {
 
     public String toString()
     {
-        return "ID:#"+ this.id + this.name + "#" + this.address + "#" + this.getPhone_number();
-    }
-
-    public String toXML() {
-        return "<buddyInfo>" + "<name>" + this.name + "</name>" + "<address>" + this.address + "</address>" + "<phone-number>"
-                + this.phone_number + "</phone-number>" + "</buddyInfo>" ;
+        return String.format("ID:%d#Name:%s#Address:%s#Phone:%s",
+                this.id, this.name, this.address, this.phone_number);
     }
 
     public boolean equals(Object obj) {

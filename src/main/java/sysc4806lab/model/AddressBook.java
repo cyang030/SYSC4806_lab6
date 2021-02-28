@@ -18,8 +18,7 @@ public class AddressBook {
     @GeneratedValue
     private Long id = null;
 
-    //@OneToMany(cascade= CascadeType.ALL)
-    @OneToMany(cascade= CascadeType.ALL, mappedBy = "addressbook")
+    @OneToMany(cascade= CascadeType.ALL)
     private List<BuddyInfo> buddies = new ArrayList<>();
 
 
@@ -46,10 +45,13 @@ public class AddressBook {
         return addressBook;
     }
 
-    public void addElement(BuddyInfo buddy) {
-        LOGGER.info("addre book size old" + buddies.size());
-        LOGGER.info("added" + buddies.add(buddy));
-        LOGGER.info("addre book size new" + buddies.size());
+    public boolean addElement(BuddyInfo buddy) {
+        return buddies.add(buddy);
+    }
+
+    public boolean removeElement(Long id) {
+        buddies.removeIf(buddyInfo -> buddyInfo.getId() == id);
+        return true;
     }
 
     public List<BuddyInfo> getBuddies() {
